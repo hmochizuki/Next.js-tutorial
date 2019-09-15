@@ -15,5 +15,12 @@
     "next": "^9.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.6",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "typescript": "^3.6.3"
   }
 }
