@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import App, { Container } from "next/app";
-import GlobalNav from "../components/GlobalNav/GlobalNav";
+import GlobalNav from "../src/components/organisms/GlobalNav/GlobalNav";
 
 /*
   カスタム共通処理
