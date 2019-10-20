@@ -1,18 +1,40 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+
+export default function GlobalNav(): ReactElement {
+  return (
+    <Header>
+      <Title>h_mochizuki's portfolio</Title>
+      <Nav>
+        <Ul>
+          <Li>
+            <Link href="/Home">
+              <LinkText>Home</LinkText>
+            </Link>
+          </Li>
+          <Li>
+            <Link href="/AboutME">
+              <LinkText>About Me</LinkText>
+            </Link>
+          </Li>
+        </Ul>
+      </Nav>
+    </Header>
+  );
+}
 
 const Header = styled.header`
   align-items: center;
   display: flex;
   height: 50px;
   padding: 0 24px;
-  background-color: #5a170e;
+  background-color: #00a9e1;
 `;
 
 const Title = styled.h1`
   font-size: 20px;
-  color: #e65100;
+  color: #fff;
 `;
 
 const Nav = styled.nav`
@@ -36,31 +58,3 @@ const LinkText = styled.span`
   padding: 4px 8px;
   user-select: none;
 `;
-
-// TODO: return の型定義
-export default function GlobalNav() {
-  return (
-    <Header>
-      <Title>h_mochizuki's portfolio</Title>
-      <Nav>
-        <Ul>
-          <Li>
-            <Link href="/Home">
-              <LinkText>Home</LinkText>
-            </Link>
-          </Li>
-          <Li>
-            <Link href="/AboutME">
-              <LinkText>About Me</LinkText>
-            </Link>
-          </Li>
-          {/* <Li>
-          <Link href="/">
-            <LinkText>詳細</LinkText>
-          </Link>
-        </Li> */}
-        </Ul>
-      </Nav>
-    </Header>
-  );
-}

@@ -1,6 +1,6 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import styled, { ServerStyleSheet } from "styled-components";
 
 /*
   # カスタムドキュメント
@@ -28,18 +28,28 @@ export default class MyDocument extends Document {
   public render() {
     return (
       <html lang="ja">
-        <Head>
-          <meta charSet="UTF-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <meta name="author" content="h_mochizuki" />
-          <link rel="stylesheet" href="/static/reset.css" />
-        </Head>
-        <body>
+        <div>
+          <Head>
+            <meta charSet="UTF-8" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width,initial-scale=1"
+            />
+            <meta name="author" content="h_mochizuki" />
+            <link rel="stylesheet" href="/static/reset.css" />
+          </Head>
+        </div>
+        <Body>
           <Main />
           <NextScript />
-        </body>
+        </Body>
       </html>
     );
   }
 }
+
+const Body = styled.body`
+  margin: 0;
+  background-color: #fafafa;
+`;

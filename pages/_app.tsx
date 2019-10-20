@@ -36,6 +36,7 @@ const Root = styled.div`
   margin: 0;
 `;
 
-const ContentsArea = styled.section`
-  background-color: #f3f3f3;
+const ContentsArea = styled.div`
+  margin: 0;
+  background-color: #fafafa;
 `;
